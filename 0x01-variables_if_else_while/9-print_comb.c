@@ -2,24 +2,27 @@ able File  23 lines (22 sloc)  251 Bytes
 
 #include <stdio.h>
 /**
-* main - entry point
+* main - Prints all possible combinations of single-digit numbers.
 *
-* Return: alway returns 0
+* Return: always 0.
 *
 */
 int main(void)
 {
-	int i;
+	int num;
 
-	for (i = 10; i < 20; i++)
+	for (num = 0; num <= 9; num++)
 	{
-		putchar((i % 10) + '0');
-		if (i != 19)
-		{
+		putchar((num % 10) + '0');
+		if (num == 9)
+			continue;
+
+
 			putchar(',');
 			putchar(' ');
 		}
 	}
 	putchar('\n');
+
 	return (0);
 }
